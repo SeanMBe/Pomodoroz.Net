@@ -1,0 +1,34 @@
+﻿@model WinnipegTomatoes.Models.Activity
+
+    <div class="row page-header">
+        <div class="span1">
+            <input type="checkbox" 
+                    activity_id="@Model.ActivityId" 
+                    class="activity_completed" 
+                    @if (Model.Completed) { <text>checked="checked"</text> } />
+        </div>
+
+        <div class="span3">
+            @Model.Title
+        </div>
+
+        <div class="span1">
+            <a activity_id="@Model.ActivityId" id="" class="btn btn-success start_pomodoro">Start</a>
+        </div>
+
+        <div class="span1">
+            @Html.ActionLink("Edit", "Edit", new { id = Model.ActivityId }, new { @class = "btn btn-primary" }) 
+        </div>
+
+        <div class="span1">
+            @Html.ActionLink("Delete", "Delete", new { id = Model.ActivityId }, new { @class = "btn btn-danger" })
+        </div>
+
+        <div class="span3">
+            @if (Model.Pomodoros != null)
+                { Html.RenderPartial("_PomodoroSummary", Model.Pomodoros); }
+            else
+                { <text>None</text> } 
+        </div>
+
+   </div>

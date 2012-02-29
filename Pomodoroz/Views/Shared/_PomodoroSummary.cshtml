@@ -1,0 +1,24 @@
+﻿@model IEnumerable<WinnipegTomatoes.Models.Pomodoro>
+
+@foreach (var pomodoro in Model.OrderBy(p=>p.CreatedAt))
+{
+    if (pomodoro.CompletedAt.HasValue)
+    { 
+        <text><img style="width:16px; height:16px;" src="../../Content/images/tomatoe.jpg" /> </text> 
+    }
+    else {
+
+        if (pomodoro.ResetAt.HasValue)
+        { 
+            <text><img style="width:16px; height:16px;"  src="../../Content/images/splat.jpg" /> </text> 
+        }
+        else
+        { 
+            if (!pomodoro.CompletedAt.HasValue && !pomodoro.CompletedAt.HasValue)
+            { 
+                <text><img style="width:16px; height:16px;"  src="../../Content/images/hourglass.png" /></text>
+            }
+        }
+    }
+                                                                                                   
+}

@@ -1,0 +1,28 @@
+@model WinnipegTomatoes.Models.Activity
+
+@* This partial view defines form fields that will appear when creating and editing entities *@
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Title)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Title)
+    @Html.ValidationMessageFor(model => model.Title)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Completed)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Completed)
+    @Html.ValidationMessageFor(model => model.Completed)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Username)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Username)
+    @Html.ValidationMessageFor(model => model.Username)
+</div>
+

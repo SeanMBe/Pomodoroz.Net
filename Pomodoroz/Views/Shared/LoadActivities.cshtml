@@ -1,0 +1,37 @@
+﻿@model IEnumerable<WinnipegTomatoes.Models.Activity>
+
+<!-- list all the activities that belong to this user -->
+    @foreach (var item in Model)
+        { Html.RenderPartial("Activity", item); }
+
+
+
+
+
+
+<script type="text/javascript">
+    $(function () {
+        $(".activity_completed").on("click", function (event) {
+
+            $.ajax('Activity/SetActivityComplete',
+         {
+             type: 'put',
+             data: {
+                 activityId: $(event.target).attr('activity_id'),
+                 complete: $(event.target).is(':checked') ? 'true' : 'false'
+             },
+             success: updateDisplay
+         });
+
+        });
+
+        $(".start_pomodoro").on("click", function (event) {
+            $.ajax('Pomodoro/StartPomodoro',
+        {
+            type: 'post',
+            data: { activityId: $(event.target).attr('activity_id') },
+            success: updateDisplay
+        });
+        });
+    });
+</script>

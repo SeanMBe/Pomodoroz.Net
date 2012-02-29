@@ -1,0 +1,14 @@
+@model IEnumerable<WinnipegTomatoes.Models.Activity>
+@{ ViewBag.Title = "Winnipeg Tomatoes"; }
+
+
+<!-- if there is a running pomodoro, display it here -->
+<div id="running-pomodoro">
+    @{ Html.RenderAction("RunningPomodoro"); }
+</div>
+
+
+<!-- list all the activities that belong to this user -->
+<div id="action-list">
+    @{ Html.RenderPartial("LoadActivities", Model); }
+</div>

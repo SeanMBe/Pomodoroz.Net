@@ -1,0 +1,32 @@
+﻿@model WinnipegTomatoes.Models.Pomodoro
+
+@if (Model != null)
+{
+    <div class="row page-header">
+        <div class="span5 offset3">
+            <div id="existing-pomodoro" existing_pomodoro_id="@Model.PomodoroId">
+                @Model.Activity.Title started at @Model.CreatedAt.ToString("h:mm")
+                <div id="reset-existing-pomodoro" class="btn btn-danger" existing_pomodoro_id="@Model.PomodoroId">Interrupt</div>
+            </div>
+        </div>
+    </div>
+}
+
+
+
+
+
+
+<script type="text/javascript">
+    // wish I didn't have to do this inline...
+    $(function () {
+        $("#reset-existing-pomodoro").on("click", function (event) {
+            $.ajax('Pomodoro/ResetPomodoro',
+        {
+            type: 'put',
+            data: { activityId: $(event.target).attr('existing_pomodoro_id') },
+            success: updateDisplay
+        })
+        });
+    });
+</script>

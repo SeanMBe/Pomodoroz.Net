@@ -1,0 +1,29 @@
+@model WinnipegTomatoes.Models.Activity
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Activity</legend>
+
+    <div class="display-label">Title</div>
+    <div class="display-field">@Model.Title</div>
+
+    <div class="display-label">Completed</div>
+    <div class="display-field">@Model.Completed</div>
+
+    <div class="display-label">UserName</div>
+    <div class="display-field">@Model.UserName</div>
+
+    <div class="display-label">Pomodoros</div>
+    <div class="display-field">@(Model.Pomodoros == null ? "None" : Model.Pomodoros.Count.ToString())</div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ActivityId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+
