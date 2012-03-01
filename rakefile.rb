@@ -17,4 +17,14 @@ msbuild :build do |msb|
   msb.solution = "#{FileList['**/*.sln'].first}" 
 end
 
-task :default => ["deps","build"]
+desc "Run Unit Tests"
+task :unit do
+puts 'unit tests'
+mspec = FileList["packages/**/mspec-clr4.exe"].first 
+puts "#{mspec}"
+	FileList["test/**/bin/**/*.test*.dll"].each { |dll|
+		sh "\"#{mspec}\" \"#{dll}\""}
+
+end
+
+task :default => ["deps","build","unit"]
