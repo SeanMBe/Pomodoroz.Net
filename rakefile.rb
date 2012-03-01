@@ -6,4 +6,11 @@ task :deps do
 	      sh "#{FileList['lib/**/NuGet.exe'].first} i #{filepath} -o packages" }
 end
 
-task :default => ["deps"]
+desc "Build Solution"
+msbuild :build do |msb|
+  msb.properties = { :configuration => :Debug }
+  msb.targets = [ :Clean, :Build ]
+  msb.solution = "#{FileList['**/*.sln'].first}" 
+end
+
+task :default => ["deps","build"]
