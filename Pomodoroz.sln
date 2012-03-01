@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pomodoroz", "Pomodoroz\Pomodoroz.csproj", "{E3DD5E68-6578-4E9C-A516-EBD784794F76}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pomodoroz", "src\Pomodoroz\Pomodoroz.csproj", "{E3DD5E68-6578-4E9C-A516-EBD784794F76}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pomodoroz.Tests", "Pomodoroz.Tests\Pomodoroz.Tests.csproj", "{5F385764-BDA3-44B9-8C46-9AC537BC6D5B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pomodoroz.Tests", "test\Pomodoroz.Tests\Pomodoroz.Tests.csproj", "{5F385764-BDA3-44B9-8C46-9AC537BC6D5B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

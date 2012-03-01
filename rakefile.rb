@@ -1,4 +1,8 @@
 require 'albacore'
+require 'rake/clean'
+
+CLEAN.include("src/**/bin", "src/**/obj", "test/**/bin", "test/**/obj")
+CLOBBER.include('packages/**')
 
 desc "Download Dependencies"
 task :deps do
