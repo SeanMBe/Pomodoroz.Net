@@ -24,14 +24,24 @@ task :unit do
 puts 'unit tests'
 mspec = FileList["packages/**/mspec-clr4.exe"].first 
 puts "#{mspec}"
-	FileList["test/**/bin/**/*.test*.dll"].each { |dll|
-		sh "\"#{mspec}\" \"#{dll}\""}
+	dlls = FileList["spec/unit/**/bin/**/*.spec.dll"]
+	if dlls.count == 0 then 
+		raise 'There should be at least one unit test. Check dlls test convention in this task'
+	end
+	dlls.each { |dll| sh "\"#{mspec}\" \"#{dll}\""}
 
+end
+
+desc "Run Acceptance Tests"
+task :acceptance do
+	puts 'acceptance tests'
 end
 
 desc "All tests"
-task :tests => :unit do
+task :tests => ["unit","acceptance"] do
 end
+
+
 
 desc "Publishes web application"
 msbuild :publish=>:tests do |m|

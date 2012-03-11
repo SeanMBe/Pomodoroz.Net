@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pomodoroz", "src\Pomodoroz\Pomodoroz.csproj", "{E3DD5E68-6578-4E9C-A516-EBD784794F76}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pomodoroz.Unit", "test\Unit\Pomodoroz.Tests\Pomodoroz.Unit.csproj", "{5F385764-BDA3-44B9-8C46-9AC537BC6D5B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pomodoroz.Spec", "spec\Unit\Pomodoroz.Tests\Pomodoroz.Spec.csproj", "{5F385764-BDA3-44B9-8C46-9AC537BC6D5B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Spec", "Spec", "{ACE66EBF-31B7-475C-8FE8-7C36B482096A}"
 EndProject
@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit", "Unit", "{051FF722-C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Acceptance", "Acceptance", "{80342766-E4D1-48D4-8B3F-7C0E2D016353}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pomodoroz.Acceptance", "test\Acceptance\Pomodoroz.Tests\Pomodoroz.Acceptance.csproj", "{3A0B1CC0-18C7-49FD-A33E-CEF631C18912}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pomodoroz.Acceptance", "spec\Acceptance\Pomodoroz.Tests\Pomodoroz.Acceptance.csproj", "{3A0B1CC0-18C7-49FD-A33E-CEF631C18912}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
