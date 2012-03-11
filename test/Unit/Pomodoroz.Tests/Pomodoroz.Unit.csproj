@@ -9,8 +9,8 @@
     <ProjectGuid>{5F385764-BDA3-44B9-8C46-9AC537BC6D5B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WinnipegTomatoes.Tests</RootNamespace>
-    <AssemblyName>WinnipegTomatoes.Tests</AssemblyName>
+    <RootNamespace>Pomodoroz.Unit</RootNamespace>
+    <AssemblyName>Pomodoroz.Unit</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -57,9 +57,6 @@
       <Private>True</Private>
       <HintPath>..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
-    <Reference Include="nunit.framework">
-      <HintPath>..\..\packages\NUnit.2.6.0.12054\lib\nunit.framework.dll</HintPath>
-    </Reference>
     <Reference Include="Rhino.Mocks">
       <HintPath>..\..\packages\RhinoMocks.3.6\lib\Rhino.Mocks.dll</HintPath>
     </Reference>
@@ -85,9 +82,9 @@
     <Content Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Pomodoroz\Pomodoroz.csproj">
+    <ProjectReference Include="..\..\..\src\Pomodoroz\Pomodoroz.csproj">
       <Project>{E3DD5E68-6578-4E9C-A516-EBD784794F76}</Project>
-      <Name>WinnipegTomatoes</Name>
+      <Name>Pomodoroz</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

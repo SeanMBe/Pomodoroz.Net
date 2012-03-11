@@ -21,3 +21,4 @@ bin
 debug
 release
 !lib/**
+*.sln~
